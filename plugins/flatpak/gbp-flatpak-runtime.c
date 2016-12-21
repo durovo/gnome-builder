@@ -961,6 +961,9 @@ gbp_flatpak_runtime_prepare_configuration (IdeRuntime       *runtime,
 
   ide_configuration_set_prefix (configuration, "/app");
   ide_configuration_set_internal_string (configuration, "flatpak-repo-name", FLATPAK_REPO_NAME);
+  ide_configuration_set_internal_string (configuration, "flatpak-sdk", self->sdk);
+  ide_configuration_set_internal_string (configuration, "flatpak-runtime", self->platform);
+  ide_configuration_set_internal_string (configuration, "flatpak-branch", self->branch);
 }
 
 static void
